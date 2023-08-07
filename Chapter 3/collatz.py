@@ -1,7 +1,9 @@
 def collatz(number):
     if number%2==0:
-        print(number//2)
+        a=number//2
+        print(a)
     else:
-        print(3*number+1)
+        a=3*number+1
+        print(a)
 
 
