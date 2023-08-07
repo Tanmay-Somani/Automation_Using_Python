@@ -8,5 +8,5 @@ def collatz(number):
             print(number)
         if number==1:
             break
-collatz(6)
+collatz(7)
 
