@@ -6,6 +6,7 @@ from sqlalchemy import create_engine
 
 try:
     engine=create_engine('mysql+mysqlconnector://{0}:{1}@{2}/{3}'.format('root','davv','root','root'))
+    order_count.to_sql(name="order_count_110823",con=engine,if_exists="replace",index=False)
     connect=mysql.connector.connect(host='localhost',database='davv',user='root',password='root')
     cursor=connect.cursor()
     query="""select * from chapri;"""
