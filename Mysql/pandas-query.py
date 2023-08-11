@@ -11,6 +11,8 @@ try:
     data=pd.DataFrame(myresult,columns=["name","age","type","no."])
     print(data)
     # print(data.head())
+    ordering_=data.groupby('age').count()
+    pprint(ordering_)
 except Error as e:
     print("Error while connecting",e)
 finally:
