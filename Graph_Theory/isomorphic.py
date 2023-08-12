@@ -4,24 +4,14 @@ import numpy as np
 
 def displ_grph(graph, ax):
     pos = nix.spring_layout(graph)
-    nix.draw(graph, pos, with_labels=True, node_size=500, node_color='#5CA904', font_size=10, ax=ax)
+    nix.draw(graph, pos, with_labels=True, node_size=500, node_color='#5CA904', font_size=9, ax=ax)
 
-# Create a 5x5 adjacency matrix for Graph 1
 adj_matrix1 = np.array([
-    [0, 1, 1, 0, 0],
-    [1, 0, 1, 1, 0],
-    [1, 1, 0, 0, 1],
-    [0, 1, 0, 0, 1],
-    [0, 0, 1, 1, 0]
+    [0, 1, 1, 0, 0],[1, 0, 1, 1, 0],[1, 1, 0, 0, 1],[0, 1, 0, 0, 1],[0, 0, 1, 1, 0]
 ])
 
-# Create a 5x5 adjacency matrix for Graph 2
 adj_matrix2 = np.array([
-    [0, 1, 0, 0, 1],
-    [1, 0, 1, 1, 0],
-    [0, 1, 0, 1, 0],
-    [0, 1, 1, 0, 1],
-    [1, 0, 0, 1, 0]
+    [0, 1, 0, 0, 1],[1, 0, 1, 1, 0],[0, 1, 0, 1, 0],[0, 1, 1, 0, 1],[1, 0, 0, 1, 0]
 ])
 
 graph1 = nix.Graph(adj_matrix1)
