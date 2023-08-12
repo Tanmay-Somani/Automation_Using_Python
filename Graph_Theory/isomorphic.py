@@ -17,6 +17,15 @@ def edge_connection_match(adj_matrix1, adj_matrix2):
     sorted_sums2 = sorted(np.sum(adj_matrix2, axis=0))
     return sorted_sums1 == sorted_sums2
 
+def degree_match(adj_matrix1, adj_matrix2):
+    degrees1 = np.sum(adj_matrix1, axis=0)
+    degrees2 = np.sum(adj_matrix2, axis=0)
+    
+    sorted_degrees1 = sorted(degrees1)
+    sorted_degrees2 = sorted(degrees2)
+    
+    return np.array_equal(sorted_degrees1, sorted_degrees2)
+
 adj_matrix1 = np.array([
     [0, 1, 1, 0, 0],[1, 0, 1, 1, 0],[1, 1, 0, 0, 1],[0, 1, 0, 0, 1],[0, 0, 1, 1, 0]
 ])
@@ -29,7 +38,10 @@ if vertex_count(adj_matrix1)==vertex_count(adj_matrix2):
     if edge_count(adj_matrix1)==edge_count(adj_matrix2):
         print("The edges in both the matrix match")
         if edge_connection_match(adj_matrix1, adj_matrix2):
-            print("The graphs are Isomorphic")
+            if degree_match(adj_matrix1, adj_matrix2):
+                print("The graphs are Isomorphic")
+            else:
+                print("The graphs are not Isomorphic")
         else:
             print("The graphs are not Isomorphic")
     else:
