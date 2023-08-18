@@ -4,7 +4,6 @@ def safeVertex(node):
     
     return True     
 
-
 def cycleDetection(E,n,root):
     path.append(root)
     for i in E[root]:
