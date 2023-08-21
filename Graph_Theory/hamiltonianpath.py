@@ -3,7 +3,11 @@ def safeVertex(node, path):
         return False
     return True     
 
+<<<<<<< HEAD
 def cycleDetection(E, n, root, path):
+=======
+def cycleDetection(E,n,root):
+>>>>>>> da151e669bfb2596b4826727978c5a7256c1930a
     path.append(root)
     for i in E[root]:
         if safeVertex(i, path):
@@ -37,4 +41,10 @@ for j in range(int(N_Edges)):
     matrix[u - 1].append(v - 1)
     matrix[v - 1].append(u - 1)
     
+<<<<<<< HEAD
 HamiltonianCycle(matrix, N_Vertices, 0)
+=======
+HamiltonianCycle(matrix,N_Vertices,0)
+
+print(path)
+>>>>>>> da151e669bfb2596b4826727978c5a7256c1930a
